@@ -26,11 +26,6 @@ public class ScreenSlideActivity extends AppCompatActivity {
      */
     private ViewPager mPager;
 
-    /**
-     * The pager adapter, which provides the pages to the view pager widget.
-     */
-    private PagerAdapter mPagerAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +39,7 @@ public class ScreenSlideActivity extends AppCompatActivity {
         mPager.setClipToPadding(false);
         mPager.setPageTransformer(true, new MyPageTransformer());
 
-        mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
-        mPager.setAdapter(mPagerAdapter);
+        mPager.setAdapter(new ScreenSlidePagerAdapter(getSupportFragmentManager()));
     }
 
     @Override
@@ -85,10 +79,6 @@ public class ScreenSlideActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return NUM_PAGES;
-        }
-
-        public Fragment getRegisteredFragment(int position) {
-            return registeredFragments.get(position);
         }
     }
 }
