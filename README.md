@@ -1,7 +1,9 @@
 ViewPagerExample
 ================
 
-This is the example of ViewPager with next and previous items visible.
+This is the example of ViewPager with next and previous items visible. Along with alpha for prev and next pages to make your viewpager attractive.
+
+Clone or download this repo to get started :)
 
 ## Screenshots
 
